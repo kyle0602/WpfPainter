@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfPainter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPainter"
+        mc:Ignorable="d"
+        Title="小畫家" Height="450" Width="800">
+    <StackPanel HorizontalAlignment="Left" Height="415" VerticalAlignment="Top" Width="790">
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF9CFBF7" Offset="0.677"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+        <ToolBarTray Height="43">
+            <ToolBar x:Name="toolBar" HorizontalAlignment="Left" Height="43" VerticalAlignment="Top" Width="393" Margin="0,0,-369,-30">
+                <Button x:Name="colorbutton" Content="色彩比刷" Height="28" VerticalAlignment="Center" Width="75"/>
+                <Slider x:Name="strockthicknesslider" Width="149" VerticalAlignment="Center"/>
+                <Label x:Name="strockthickneslabel" Content="{Binding Value, ElementName=strockthicknesslider}" VerticalAlignment="Center"/>
+                <Button x:Name="button" Content="填滿色彩" Height="38" VerticalAlignment="Center" Width="75" RenderTransformOrigin="1.211,0.547"/>
+            </ToolBar>
+        </ToolBarTray>
+        <Canvas Height="371"/>
+    </StackPanel>
+</Window>
